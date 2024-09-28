@@ -60,7 +60,16 @@ const Overview = () => {
 
     const getCampaign= (id:number): campaignType => campaign[id];
 
-  
+    const monthOrder = [
+      "January", "February", "March", "April", "May", "June", 
+      "July", "August", "September", "October", "November", "December"
+    ];
+
+    const sortedData = campaign.sort((a:campaignType, b:campaignType) => {
+      return monthOrder.indexOf(a.month) - monthOrder.indexOf(b.month);
+    });
+
+   
  
   return (
     <>
@@ -76,7 +85,7 @@ const Overview = () => {
     {selectedMonth === "This Year" ? 
     <LineChart
       
-      dataset={campaign}
+      dataset={sortedData}
       xAxis={[{ scaleType: 'point', dataKey: 'month' , valueFormatter, }]}
       series={[
         
