@@ -1,0 +1,28 @@
+.logo{
+    position: relative;
+    background-color: #23496C;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    transform: rotateY(180deg);
+ 
+
+  
+}
+
+.logo div {
+    position: absolute;
+    background-color: #426E95;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.logo div div {
+    position: absolute;
+    background-color: #FFA873;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
