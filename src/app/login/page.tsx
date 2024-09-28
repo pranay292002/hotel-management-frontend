@@ -24,7 +24,7 @@ const Login = () => {
         return res.data;
       };
     
-      const registerUser   = async (username:string, email:string, password:string, role:number = 1 ) => {
+      const registerUser   = async (username:string, email:string, password:string, role:number = 0 ) => {
 
         try{
           const res = await axios.post("https://active-paradise-796a63f81b.strapiapp.com/api/users", {
