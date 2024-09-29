@@ -7,15 +7,29 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(190, 190, 191) rgb(255, 255, 255);
+ 
+}
+
+
+*::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
 }
 
 body {
   
   font-family: Arial, Helvetica, sans-serif;
   background-color: aliceblue;
-  width: 100vw;
+  width: 98.6vw;
   height: auto;
   overflow-x: hidden;
+ 
 }
 
 @layer utilities {

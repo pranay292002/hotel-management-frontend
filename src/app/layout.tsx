@@ -25,7 +25,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`antialiased flex`}>
+      <body className={`antialiased laptop:flex`}>
         <UserState>
         <ToastContainer />
         <Sidebar/>

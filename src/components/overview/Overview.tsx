@@ -75,7 +75,7 @@ const Overview = () => {
  
   return (
     <>
-    <div className='w-[55vw] bg-white py-5 rounded-xl my-5 shadow-lg  shadow-grey-950'>
+    <div className='laptop:w-[55vw] w-[93vw] min-w-[355px] bg-white py-5 rounded-xl my-5 shadow-lg  shadow-grey-950'>
     <div className="flex justify-between my-3">
     <h6 className='text-[#24496A] font-bold mx-5'>Campaign Overview</h6>
     <select onChange={onOptionChangeHandler} className={styles.select}>
@@ -110,7 +110,7 @@ const Overview = () => {
           
         },}}
         
-      width={700}
+     
       height={300}
       
     /> : <> 
@@ -137,9 +137,10 @@ const Overview = () => {
         itemMarkWidth: 10
         
       },}}
-    width={400}
+   
     height={200}
-    margin={{right:-200}}
+    margin={{right:-50}}
+   
     
   /></> }
 

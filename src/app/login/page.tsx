@@ -144,7 +144,7 @@ const Login = () => {
     <> 
   
      
-     <div className="flex flex-col justify-center items-center w-full  rounded-xl h-[400px]">
+     <div className="flex flex-col justify-center items-center w-full  rounded-xl mt-5">
 
     <div className="bg-white rounded-xl w-fit p-5 mb-5 shadow-lg  shadow-grey-950"> <span className={`${isSignup ? "bg-gray-800 text-zinc-100": "bg-gray-400 text-zinc-900"} cursor-pointer text-[30px] py-2 px-4 rounded-xl`} onClick={()=>setIsSignup(true)}>Login</span> <span className={`${isSignup ? "bg-gray-400 text-zinc-900 ": "bg-gray-800 text-zinc-100"} cursor-pointer text-[30px] py-2 px-4 rounded-xl`} onClick={()=>setIsSignup(false)}>SignUp</span> </div>
 
@@ -166,7 +166,7 @@ const Login = () => {
       <input className="bg-gray-500 text-white rounded-md p-1 mt-1 cursor-pointer" type="submit"/>
     </form> 
    </> : <>
-   <form className="flex  bg-white text-zinc-800 w-[600px] h-70 p-5 rounded-xl justify-center gap-3 shadow-lg  shadow-grey-950" onSubmit={(e) => handleRegister(e)}>
+   <form className="flex  max-tablet:flex-col bg-white max-tablet:w-80 text-zinc-800 w-[600px] h-70 p-5 rounded-xl justify-center gap-3 shadow-lg  shadow-grey-950" onSubmit={(e) => handleRegister(e)}>
       <div className="flex flex-col gap-3"> 
       <label htmlFor="name">Username</label>
       <input className="bg-gray-100 rounded-md p-1"
@@ -182,7 +182,7 @@ const Login = () => {
              value={email}
              onChange={(e) => setEmail(e.target.value)} /> 
 
-      <input className="bg-gray-500 text-white rounded-md p-1  cursor-pointer mt-7" type="submit"/>
+      <input className="max-tablet:hidden bg-gray-500 text-white rounded-md p-1  cursor-pointer mt-7" type="submit"/>
       </div>
      
      <div className="flex flex-col gap-3">
@@ -199,7 +199,7 @@ const Login = () => {
              name="c_password"
              value={Cpassword}
              onChange={(e) => setCpassword(e.target.value)} />
-
+      <input className="tablet:hidden bg-gray-500 text-white rounded-md p-1  cursor-pointer mt-7" type="submit"/>
     
      </div>
       

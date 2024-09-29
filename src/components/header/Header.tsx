@@ -54,22 +54,22 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex justify-between w-[90vw]">
-        <div>
+      <div className="flex mt-1 justify-between items-center laptop:w-[90vw] tablet:w-[100vw]  laptop:px-0 px-5 flex-wrap-reverse max-tablet:space-x-0 space-x-10 mb-8">
+        <div className=' max-tablet:w-[100vw]'>
           <h1 className="text-[#24496A] font-normal pb-2 text-[20px] ">
             Welcome, <span className="font-black">{user.CurrentUser?.username} !</span>
           </h1>
-          <p className="text-zinc-500 text-xs mb-8">
+          <p className="text-zinc-500 text-xs ">
             Don't forget to check your activity
           </p>
         </div>
 
-        <div className="flex justify-between w-[300px] ">
-          <div className="rounded-full bg-[#FFFFFF] w-fit h-fit p-3 relative cursor-pointer">
+        <div className="flex justify-between  max-tablet:w-[100vw] max-tablet:pb-3 max-tablet:mt-3 ">
+          <div className="rounded-full bg-white w-fit h-fit p-3 relative cursor-pointer">
             <BsBell  onClick={()=>router.push('/mails')}/>
             <div className="absolute w-2 h-2 bg-red-500 rounded-full top-0 right-1"></div>
           </div>
-
+          <div className="flex gap-2">
           <div className="w-44 text-end px-2">
             <h6 className="text-[#24496A] font-bold ">{user.CurrentUser?.username}</h6>
             <p className="text-zinc-500 text-xs ">{user.CurrentUser?.userType}</p>
@@ -80,7 +80,7 @@ const Header = () => {
           </div>
           
           <div className="pt-3 text-xl text-zinc-600 cursor-pointer " onClick={toggleModal}>  {isModal ? <IoClose/> : <IoChevronDown/>}</div>
-
+          </div >
           { isModal && <div className={`flex w-80 bg-gray-300 absolute h-40 top-20 z-40 rounded-lg place-items-center  place-content-center` }>
             <form className="flex flex-col p-5 bg-white w-[90%] place-items-center  place-content-center gap-3 rounded-lg">
               <label>Set Profile</label>

@@ -42,16 +42,16 @@ export default function Home() {
 
   return (
     <>
-   <div className="mt-5 mr-0 w-[95%] ml-5">
+   <div className=" w-full laptop:pl-5">
    {isLoading ? (
     <div>Loading.....</div>
   ) : (
     <>
       <Header />
-      <div className="flex">
+      <div className="flex flex-wrap justify-center ">
         {isAdmin ? (
           <>
-            <div>
+            <div className=" ">
               <Stats />
               <Overview />
               <BookingList />

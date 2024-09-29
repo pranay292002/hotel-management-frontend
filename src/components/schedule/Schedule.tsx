@@ -97,7 +97,7 @@ const incrementDate = () => {
 
   return (
     <>
-      <div className="w-[33vw] min-h-[480px] bg-white mt-3 rounded-xl ml-6 py-3 px-4 shadow-lg  shadow-grey-200 overflow-hidden pb-5">
+      <div className="laptop:w-[33vw] w-[93vw] min-w-[355px] min-h-[480px] bg-white mt-3 rounded-xl laptop:ml-6 max-md:ml-0 py-3 px-4 shadow-lg  shadow-grey-200 overflow-hidden pb-5 mb-14">
         <div className="flex justify-between mb-4">
           <h6 className="text-[#24496A] font-bold">Staff Schedule</h6>
           <p className="text-sm text-zinc-500" ><Link href={"/calender"}>see all</Link></p>
@@ -114,7 +114,7 @@ const incrementDate = () => {
           </div>
         </div>
 
-        <ul className="flex space-x-7 justify-between text-sm relative">
+        <ul className="flex justify-between text-sm relative">
           {days.map((day, index) => (
             <li
               key={index}
@@ -142,7 +142,7 @@ const incrementDate = () => {
             </li>
           ))}
 
-          <div className="h-0.5 bg-gray-300 w-[750px] absolute top-[69px] transform -translate-x-12 " />
+          <div className="h-0.5 bg-gray-300 w-[1050px] absolute top-[69px] transform -translate-x-12 " />
         </ul>
         
         <div className="mt-10 ">

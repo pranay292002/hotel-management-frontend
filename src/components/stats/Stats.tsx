@@ -47,8 +47,8 @@ const Stats = () => {
 
   return (
     <>
-      <div className="flex w-[55vw] justify-between my-3 flex-wrap">
-        <div className="flex w-48 rounded-xl gap-2 bg-[#FFFFFF] shadow-lg  shadow-grey-200 py-2 px-4">
+      <div className="flex laptop:w-[55vw] w-[93vw] justify-center tablet:justify-between laptop:justify-center lgLaptop:justify-between my-3 flex-wrap gap-5">
+        <div className="flex w-48 justify-center rounded-xl gap-2 bg-white shadow-lg  shadow-grey-200 py-2 px-4">
           <div className="p-2 bg-[#10B982] rounded-lg content-center">
             <IoEnter
               className="text-[40px] text-zinc-100 "
@@ -67,7 +67,7 @@ const Stats = () => {
         </div>
 
 
-        <div className="flex w-48 rounded-xl gap-2 bg-[#FFFFFF] shadow-lg  shadow-grey-950 py-2 px-4">
+        <div className="flex w-48 justify-center rounded-xl gap-2 bg-white shadow-lg  shadow-grey-950 py-2 px-4">
           <div className="p-2 bg-[#FFA873] rounded-lg content-center">
             <FaBed
               className="text-[40px] text-zinc-100 "
@@ -82,7 +82,7 @@ const Stats = () => {
         </div>
 
 
-        <div className="flex w-48 rounded-xl gap-2 bg-[#FFFFFF] shadow-lg  shadow-grey-950 py-2 px-4">
+        <div className="flex w-48 justify-center rounded-xl gap-2 bg-white shadow-lg  shadow-grey-950 py-2 px-4">
           <div className="p-2 bg-[#0187CE] rounded-lg content-center">
             <IoEnter
               className="text-[40px] text-zinc-100 "

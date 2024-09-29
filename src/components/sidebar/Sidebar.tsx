@@ -44,21 +44,21 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="w-[5%] bg-[#FFFFFF] h-[100vh] sticky top-0 flex flex-col justify-around place-items-center py-4  text-zinc-600 ">
+      <div className="w-full laptop:w-[5%] bg-white opacity-100 laptop:h-[100vh] h-12 tablet:sticky fixed bottom-0  tablet:top-0   flex laptop:flex-col laptop:justify-around justify-between place-items-center py-4 z-[100] px-6 laptop:px-0 text-zinc-600 ">
         <div className={styles.logo}>
           <div>
             <div></div>
           </div>
         </div>
 
-        <ul className="flex flex-col gap-8 mb-16 text-[18px]">
-          <li className="group relative">
+        <ul className="flex laptop:flex-col laptop:gap-8  tablet:gap-10 gap-3 laptop:mb-16 text-[18px]">
+          <li className="group relative shrink">
             <Link href="/" onClick={() => setActiveTab("home")} className="tooltip">
               {activeTab === "home" ? <BsFillGridFill /> : <RxDashboard />}
             </Link>
             <span className="invisible w-[80px] text-sm bg-gray-600 text-white text-center p-1.5 rounded-lg absolute z-40 group-hover:visible top-[-5px] left-[115%]">Dashboard</span>
           </li>
-          <li className="group relative">
+          <li className="group relative shrink">
             <Link href="/statistics" onClick={() => setActiveTab("statistics")}>
              
               {activeTab === "statistics" ? (
@@ -67,16 +67,16 @@ const Sidebar = () => {
                 <VscPieChart />
               )}
             </Link>
-            <span className="invisible w-[80px] text-sm bg-gray-600 text-white text-center p-1.5 rounded-lg absolute z-40 group-hover:visible top-[-5px] left-[115%]">Statistics</span>
+            <span className="invisible w-[80px] text-sm bg-gray-600 text-white text-center p-1.5 rounded-lg absolute z-40 group-hover:visible  top-[-5px] left-[115%]">Statistics</span>
           </li>
-          <li className="group relative">
+          <li className="group relative shrink">
             <Link href="/feedbacks" onClick={() => setActiveTab("feedbacks")}>
             
               {activeTab === "feedbacks" ? <BsHeartFill /> : <BsHeart />}{" "}
             </Link>
             <span className="invisible w-[80px] text-sm bg-gray-600 text-white text-center p-1.5 rounded-lg absolute z-40 group-hover:visible top-[-5px] left-[115%]">Feedbacks</span>
           </li>
-          <li className="group relative">
+          <li className="group relative shrink">
             <Link href="/bills" onClick={() => setActiveTab("bills")}>
           
               {activeTab === "bills" ? (
@@ -87,7 +87,7 @@ const Sidebar = () => {
             </Link>
             <span className="invisible w-[80px] text-sm bg-gray-600 text-white text-center p-1.5 rounded-lg absolute z-40 group-hover:visible top-[-5px] left-[115%]">Bills</span>
           </li>
-          <li className="group relative">
+          <li className="group relative shrink">
             <Link href="/calender" onClick={() => setActiveTab("calender")}>
              
               {activeTab === "calender" ? (
@@ -98,14 +98,14 @@ const Sidebar = () => {
             </Link>
             <span className="invisible w-[80px] text-sm bg-gray-600 text-white text-center p-1.5 rounded-lg absolute z-40 group-hover:visible top-[-5px] left-[115%]">Calender</span>
           </li>
-          <li className="group relative">
+          <li className="group relative shrink">
             <Link href="/mails" onClick={() => setActiveTab("mails")}>
              
               {activeTab === "mails" ? <IoMailSharp /> : <GoMail />}
             </Link>
             <span className="invisible w-[80px] text-sm bg-gray-600 text-white text-center p-1.5 rounded-lg absolute z-40 group-hover:visible top-[-5px] left-[115%]">Mails</span>
           </li>
-          <li className="group relative">
+          <li className="group relative shrink">
             <Link href="/settings" onClick={() => setActiveTab("settings")}>
            
               {activeTab === "settings" ? (
