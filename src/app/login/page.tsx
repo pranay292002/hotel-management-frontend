@@ -24,29 +24,29 @@ const Login = () => {
         return res.data;
       };
     
-      const registerUser   = async (username:string, email:string, password:string, role:number = 0 ) => {
-
-        try{
-          const res = await axios.post("https://active-paradise-796a63f81b.strapiapp.com/api/users", {
-            username: username,
-            email:email,
-            password: password,
-            role: role,
-            
-          } 
-        
-        );
-    
+      const registerUser = async (username: string, email: string, password: string) => {
+        try {
+          const res = await axios.post(
+            "https://active-paradise-796a63f81b.strapiapp.com/api/auth/local/register", 
+            {
+              username,
+              email,
+              password,
+            },
+            {
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          );
           return res.data;
+        } catch (error: any) { 
+          toast.error("Error registering user:", error.response?.data || error.message);
+          if (error.response) {
+            toast.error("Response data:", error.response.data);
+          }
+          return null; 
         }
-        catch(error){
-    
-          console.log(error)
-    
-        }
-        
-    
-        
       };
 
 
@@ -128,9 +128,9 @@ const Login = () => {
         setErrors(newErrors);
 
         if (Object.keys(newErrors).length === 0) {
-            registerUser(username, email, password, 1 )
+            registerUser(username, email, password )
             .then(() => {toast.success('Form submitted successfully! now you can login.'); setIsLoading(false)})
-            .catch(()=> {toast.error('Server Error !!. '); setIsLoading(false)});
+            .catch((error)=> { toast.error(error.message);; setIsLoading(false)});
         } else {
             
             toast.error('Form submission failed due to validation errors. '+ Object.values(errors));

@@ -48,8 +48,7 @@ const Overview = () => {
    const valueFormatter = (value: string) => value.slice(0,3);
   
 
-   const roomVisited = campaign.map((item: campaignType ) => item.room_visited)
-   const roomBooked = campaign.map((item: campaignType) => item.room_booked)
+   
 
    const [selectedMonth , setSelectedMonth] = useState<string | number>("This Year")
 
@@ -68,6 +67,9 @@ const Overview = () => {
     const sortedData = campaign.sort((a:campaignType, b:campaignType) => {
       return monthOrder.indexOf(a.month) - monthOrder.indexOf(b.month);
     });
+
+    const roomVisited = sortedData.map((item: campaignType ) => item.room_visited)
+   const roomBooked = sortedData.map((item: campaignType) => item.room_booked)
 
    
  
